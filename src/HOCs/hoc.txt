@@ -1,0 +1,18 @@
+
+1. Higher Order Components (HOCs) are a tool that allows you to extend your component's
+capabilities without sacriicing code clarity or creating unnecessary redundancies.
+
+2. Higher-order-components are a design pattern in React where a function takes a components
+as an argument and returns an enhanced new component.
+
+3. In simpler terms, Hocs are functions that wrap existing components, providing them with additional
+props or behaviors.
+
+4. The main benefit of HOCs is that they enable us to extend functionality of diferent components
+without repeating same code in each of them. This promotes a code reuse an enhances the
+maintainbility of your React applications.
+
+Approces to Hocs - There are two approaches to implementing HOCs:
+
+1.Passing the original component as parameter
+2.Render Props Approces

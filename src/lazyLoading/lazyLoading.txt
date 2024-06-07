@@ -1,0 +1,39 @@
+1. Lazy Loading in React Js helps to optimize performance of React applications.
+The data is only rendered when visited or scrolled it can be images, scripts, etc.
+
+2. Lazy Loading helps to load the web pages quickly and presents only the limited content
+to the user that is needed for the interaction.
+
+3.lazy loading is a technique in react that allows you yo load components, modules, or
+assets asynchronously, improving the loading time of your application.
+
+4. React provides a built-in Reacr-lazy() method and Suspensee component to achieve lazy loading.
+
+Steps to Implement lazy Loading:
+
+1. Recognize the component you want to Lazy Load.These are mostly Large or
+Complex which is not necessary for all the users when the page loads.
+
+2. Import 'lazy()' and Suspense components from the React package.
+
+3.Use the 'lazy()' function to dynamically import that component you want to
+lazy load:
+"Note that the argument to the 'lazy()' function should be a function that
+ returns the result of the import() function.
+
+// Implement Lazy Loding with React.Lazy method
+const MyComponent = React.lazy(() => import('./MyComponent'));
+
+4. Wrap the lazy-loaded component in a 'Suspense' component, which will display a 
+fallback UI while the component is being loaded:
+<Suspense fallback={<div>Loading...</div>}>
+      <MyComponent />
+</Suspense>
+
+
+Code Splitting and Chunking:
+
+1.Code splitting is a technique used in web development to improve the performance of applications
+ by splitting code into smaller bundles (or chunks) that can be loaded on demand. 
+
+2.Chunking refers to the process of splitting the code into these smaller, manageable chunks.

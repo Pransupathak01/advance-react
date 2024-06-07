@@ -1,0 +1,30 @@
+Bundler:
+A bunder is a tool that takes your code and dependencies and combines them into a 
+single files (or few files).Common bundlers include Webpack,Rollup, and parcel.
+
+Example with Webpack:
+// webpack.config.js
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
+};

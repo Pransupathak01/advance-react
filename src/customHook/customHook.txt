@@ -1,0 +1,17 @@
+Custom Hooks: Sharing logic between components
+
+1. React Custom Hooks are JavaScript functions starting with ‘use’ 
+containing reusable logic and may call other Hooks.
+
+2. We know that hooks like useState, and useEffect are reusable components. 
+Sometimes we make components that we have to reuse again and again in the application. 
+In this case, we can convert the component to hooks by extracting logic from it.
+
+Reusable custom hooks:
+
+ If we have code we would like to extract from a component, a custom hook might be 
+ the proper extraction if the following conditions are met:
+
+1.The extracted code has no JSX output (if it does, then you should create a component instead)
+
+2.the extracted code includes calls to other hooks (if it doesn’t, then create a regular function instead)

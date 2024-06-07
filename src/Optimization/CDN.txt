@@ -1,0 +1,35 @@
+CDN / Server Level Optimization:
+Content Delivery Networks (CDNs) and server-level optimizations help deliver content more efficiently.
+
+CDN Optimization:
+
+1.Caching: Serve content from the nearest server to the user.
+2.Compression: Use Gzip or Brotli to compress files.
+3.HTTP/2: Use HTTP/2 for multiplexing and server push
+
+"To use a CDN for loading React and ReactDOM in a React project, you typically modify the index.html file 
+in your project's public directory. This file serves as the main HTML file for your application."
+inside <head> Tag include below line of code.
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
+
+Points to Consider:
+
+Bundling:
+
+If you're using Webpack (or another bundler), make sure that your bundling process doesn't also include React and ReactDOM
+in the output. This can be done using Webpack's externals configuration. Development vs Production:
+"externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+  },"
+
+Use development versions of React and ReactDOM for development to benefit from warnings and error messages.
+ For production, use the minified versions as shown in the example above for better performance.
+Ensure Compatibility:
+
+Ensure that the versions of React and ReactDOM you're including via CDN are compatible with your codebase.
+
+"The externals property tells Webpack that react and react-dom should be treated as external dependencies. 
+As a result, they won't be included in the bundle, and instead, the application will use the globally available
+React and ReactDOM variables provided by the CDN scripts."
